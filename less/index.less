@@ -57,65 +57,68 @@ html, body {
 	font-family: 'Georgia', sans-serif;
 	height: 100%;
 	margin: 0px 30px;
+	@media screen and (max-width: 500px) {
+		margin: auto 0px;
+	}
 }
 
-p {
-	font-family: 'Times New Roman', sans-serif;
-}
+	p {
+		font-family: 'Times New Roman', sans-serif;
+	}
 
-h1 {
-	font-size: 35px;
-}
+	h1 {
+		font-size: 35px;
+	}
 
-h2 {
-	font-size: 25px;
-}
+	h2 {
+		font-size: 25px;
+	}
 
-hr {
-	margin: 20px 0px;
-}
+	hr {
+		margin: 20px 0px;
+	}
 
-a {
-	color: gray;
-	text-decoration: none;
-}
+	a {
+		color: gray;
+		text-decoration: none;
+	}
 
-a:hover {
-	color: @color-table;
-}
+	a:hover {
+		color: @color-table;
+	}
 
-// Variables
-@color: #EEEEEE;
-@color-white: #FFFFFF;
-@bg-color: #F5F5F5;
-@color-soft-black: #232b2b;
-@color-table: #50BFE6;
+	// Variables
+	@color: #EEEEEE;
+	@color-white: #FFFFFF;
+	@bg-color: #F5F5F5;
+	@color-soft-black: #232b2b;
+	@color-table: #50BFE6;
 
-// Mixins
-.flex-column {
-	display: flex;
-	flex-direction: column;
-}
-.text-center {
-	text-align: center;
-}
+	// Mixins
+	.flex-column {
+		display: flex;
+		flex-direction: column;
+	}
+	.text-center {
+		text-align: center;
+	}
 
-.table {
-	margin-top: 25px;
-	border-collapse: collapse;
-	width: 100%;
-}
+	.table {
+		margin-top: 25px;
+		border-collapse: collapse;
+		width: 100%;
+	}
 
-.table-th-td {
-	border: 1px solid @color;
-}
+	.table-th-td {
+		border: 1px solid @color;
+	}
 
-.th-td {
-	height: 50px;
-	.text-center();
-	padding-top: 20px;
-	background-color: lighten(@color-table, 30%);
-}
+	.th-td {
+		height: 50px;
+		.text-center();
+		padding-top: 20px;
+		background-color: lighten(@color-table, 30%);
+	}
 
 	// Navigation //
 	nav {
@@ -126,13 +129,19 @@ a:hover {
 		@media screen and (max-width: 500px) {
 			margin-right: 40px;
 		}
-
+		@media screen and (max-width: 320px) {
+			margin-right: 22px;
+		}
 		a {
 			color: gray;
 			margin-left: 25px;
 			margin-bottom: 5px;
 			font-size: 17px;
 			text-decoration: none;
+			@media screen and (max-width: 320px) {
+				font-size: 14px;
+				margin-left: 35px;
+			}
 		}	
 
 		a:hover {
@@ -154,10 +163,19 @@ a:hover {
 				max-width: 75%;
 				margin-left: 15%;
 			}
+			@media screen and (max-width: 320px) {
+				max-width: 90%;
+				margin-left: 5%;
+			}
 		}
 		@media screen and (max-width: 500px) {
 			#quote {
 				margin-left: 30%;
+			}
+		}
+		@media screen and (max-width: 320px) {
+			#quote {
+				margin-left: 27%;
 			}
 		}
 
@@ -167,12 +185,19 @@ a:hover {
 			@media screen and (max-width: 500px) {
 				padding-left: 40px;
 			}
+			@media screen and (max-width: 320px) {
+				padding-left: 10px;
+			}
 		}
 
 		h1 {
 			@media screen and (max-width: 500px) {
 				font-size: 35px;
 				text-align: center;
+			}
+			@media screen and (max-width: 320px) {
+				font-size: 30px;
+				margin-right: 5px;
 			}
 		}
 
@@ -187,6 +212,9 @@ a:hover {
 			background-color: @color-soft-black;
 			@media screen and (max-width: 500px) {
 				margin-left: 27%;
+			}
+			@media screen and (max-width: 320px) {
+				margin-left: 23%;
 			}
 			a {
 				color: @color-white;
@@ -218,9 +246,11 @@ a:hover {
 					text-align: center;
 				}
 			}
-
 			p {
 				margin-top: 30px;
+				@media screen and (max-width: 320px) {
+					margin-left: 10px;
+				}
 			}
 		}
 
@@ -234,6 +264,12 @@ a:hover {
 				margin-left: 10%;
 				h2 {
 					text-align: center;
+				}
+			}
+
+			@media screen and (max-width: 320px) {
+				h2 {
+					margin-right: 11px;
 				}
 			}
 
@@ -300,6 +336,9 @@ a:hover {
 		@media screen and (max-width: 500px) {
 			margin-top: 75px;
 		}
+		@media screen and (max-width: 320px) {
+			margin-left: 15px;
+		}
 		h2 {
 			font-size: 25px;
 			margin-bottom: 20px;
@@ -315,4 +354,7 @@ a:hover {
 		.text-center();
 		margin-top: 25px;
 		margin-bottom: 30px;
+		@media screen and (max-width: 320px) {
+			margin-right: 10px;
+		}
 }
